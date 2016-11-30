@@ -1,0 +1,31 @@
+GIT
+  remote: https://github.com/adamcooke/hs1xx
+  revision: 374e9ea3267d717dc2707380bb7db9245aebe76a
+  specs:
+    hs1xx (1.0.0)
+      json
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    curb (0.9.3)
+    hashie (3.4.6)
+    hue (0.2.0)
+      curb
+      json
+      log_switch (= 0.4.0)
+      thor
+    json (2.0.2)
+    log_switch (0.4.0)
+    thor (0.19.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hashie
+  hs1xx!
+  hue
+
+BUNDLED WITH
+   1.13.6

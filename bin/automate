@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.expand_path('../../lib', __FILE__))
+
+require 'bundler/setup'
+require 'automation'
+
+command = ARGV[0]
+command_file = File.expand_path("../../lib/automation/commands/#{command}.rb", __FILE__)
+if File.file?(command_file)
+  require command_file
+  command_class = Automation::Commands.const_get(command.camelize).new
+  command_class.run
+else
+  puts "Invalid command: #{command}"
+end
+
+
